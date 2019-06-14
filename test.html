@@ -1,0 +1,778 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>eBet 技术支援</title>
+    <style id="search_style"></style>
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/component.css">
+    <link rel="stylesheet" href="css/custom-styles.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/search.css">
+    <link rel="stylesheet" href="css/demo.css">
+    <link rel="stylesheet" href="css/font-awesome-ie7.css">
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <style type="text/css">
+        mark {
+            background:yellow;
+            color:black;
+            font:bold;
+            font-size:16px;
+            border:2px solid black;
+        }
+    </style>
+</head>
+
+<body style="background-color:white;">
+    <label for="text" style="position:fixed;right:0px;top:175px;color:red;font-size:20px;"><u>Search Keywords</u></label>
+    <input type="text" id="text" value="" placeholder="Search Keywords" style="position:fixed;right:0;top:200px;">
+    <div style="width:90%">
+        <table>
+            <span id="spanFirstt" style="position:relative;left:0%;">First</span>
+            <span id="spanPrett" style="position:relative;left:20%;">Pre</span>
+            <span id="spanNextt" style="position:relative;left:60%;">Next</span>
+            <span id="spanLastt" style="position:relative;left:80%;">Last</span>
+            <span style="position:relative;left:34%" id="pages01">Pages</span>
+            <span id="spanPageNumt" style="position:relative;left:35%;"></span>
+            <span style="position:relative;left:36%;" id="of01">of</span>
+            <span id="spanTotalPaget" style="position:relative;left:37%;"></span>
+            <tr class="searchable1">
+                <td class="a02">Hashtag</td>
+                <td class="a03">Question</td>
+                <td class="a04">Answer</td>
+            </tr>
+            <tbody id="tablelsw">
+                <tr class="searchable" data-index="signature/encrypt/decrypt regarding to the signature, should I use public key or private key for encryption? private key is for encryption, and public key is for decryption.">
+                    <td class="a02">signature/encrypt/decrypt</td>
+                    <td class="a03">Regarding to the signa ture, should I use public key or private key for encryption?</td>
+                    <td class="a04">Private key is for encryption, and public key is for decryption.</td>
+                </tr>
+                <tr class="searchable" data-index="api/parameter regarding to queryincreasecreditrecord, what is difference between queryreqno and reqno? reqno is a unique id create from ebet to record every request we make.queryreqno is the reqno of every increasecredit request that save in channel side to let ebet search by.">
+                    <td class="a02">api/parameter</td>
+                    <td class="a03">Regarding to queryIncreaseCreditRecord, what is difference between queryReqNo and ReqNo?</td>
+                    <td class="a04">reqNo is a unique id create from eBet to record every request we make.queryReqNo is the reqNo of every increaseCredit request that save in channel side to let eBet search by.</td>
+                </tr>
+                <tr class="searchable" data-index="api/parameter does uppercase or lowercase matter in parameter? yes, it matters. if you misuse, errors occured.">
+                    <td class="a02">api/parameter</td>
+                    <td class="a03">Does uppercase or lowercase matter in parameter?</td>
+                    <td class="a04">yes, it matters. If you misuse, errors occured.</td>
+                </tr>
+                <tr class="searchable" data-index="refundseqno/refunded refundseqno is to check which bet information is refunded? refundseqno is the seqno corresponding to the betlist in the increasecredit event">
+                    <td class="a02">refundseqno/refunded</td>
+                    <td class="a03">refundseqno is to check which bet information is refunded? </td>
+                    <td class="a04">refundseqno is the seqno corresponding to the betlist in the increaseCredit event</td>
+                </tr>
+                <tr class="searchable" data-index="increasecredit/ bet the information about the players' bet  in all the games via api? api：increasecredit,when the player plays the game, we will immediately send a request to inform you.">
+                    <td class="a02">increaseCredit/ bet</td>
+                    <td class="a03">the information about the players' bet  in all the games via API?</td>
+                    <td class="a04">API：increaseCredit,When the player plays the game, we will immediately send a request to inform you.</td>
+                </tr>
+                <tr class="searchable" data-index="whitelist what are the parts of the whitelist? the whitelist needs to provide ip to add. if there are no special requirements, the presets are all open.the whitelist has three parts, the game front end, call our ebetapi, and data background login.">
+                    <td class="a02">whitelist</td>
+                    <td class="a03">What are the parts of the whitelist?</td>
+                    <td class="a04">The whitelist needs to provide IP to add. If there are no special requirements, the presets are all open.The whitelist has three parts, the game front end, call our ebetAPI, and data background login.</td>
+                </tr>
+                <tr class="searchable" data-index="token how to jump directly into the game hall? you can use this url: http://<'provide by ebet>/?infourl=h5/<'provide by ebet>&username=test&accesstoken=abc12345 to get directly into the game lobby.">
+                    <td class="a02">token</td>
+                    <td class="a03">How to jump directly into the game hall?</td>
+                    <td class="a04">You can use this URL: http://<'provide by ebet>/?infoUrl=h5/<'provide by ebet>&username=test&accessToken=abc12345 to get directly into the game lobby.</td>
+                </tr>
+                <tr class="searchable" data-index="api/parameter is the value of seqno unique? in the incrementcredit api, the value of seqno is unique.">
+                    <td class="a02">api/parameter</td>
+                    <td class="a03">Is the value of seqNo unique?</td>
+                    <td class="a04">In the incrementCredit API, the value of seqNo is unique.</td>
+                </tr>
+                <tr class="searchable" data-index="wallet how many login methods are there for multi-wallets? multi-wallets are divided into three login methods, normal login, token login, and applinks login.">
+                    <td class="a02">wallet</td>
+                    <td class="a03">How many login methods are there for multi-wallets?</td>
+                    <td class="a04">Multi-wallets are divided into three login methods, normal login, Token login, and AppLinks login.</td>
+                </tr>
+                <tr class="searchable" data-index="api/parameter if i want to update the betlimit of user by <updatebetlimit> api?how should i set the parameters? we set betlimit by gametype. if you want to update betlimit of a gametype. you should set all parameters of that gametype.">
+                    <td class="a02">api/parameter</td>
+                    <td class="a03">If I want to update the betlimit of user by < updatebetlimit > api?How should I set the parameters?</td>
+                    <td class="a04">We set betlimit by gameType. If you want to update betlimit of a gameType. You should set all parameters of that gameType.</td>
+                </tr>
+                <tr class="searchable" data-index="api/parameter why i got status code 4025 when i make a request? it means some parameters of your request is set in a wrong way.the datatype of api parameters should be the same as in api document.">
+                    <td class="a02">api/parameter</td>
+                    <td class="a03">why I got status code 4025 when I make a request?It means some parameters of your request is set in a wrong way.The datatype of api parameters should be the same as in api document.</td>
+                    <td class="a04">It means some parameters of your request is set in a wrong way.The datatype of api parameters should be the same as in api document.</td>
+                </tr>
+                <tr class="searchable" data-index="api/resend settlement technical feedbackcould ask them resend settlement to us? let customer service assist in paying">
+                    <td class="a02">api/resend settlement</td>
+                    <td class="a03">Technical feedbackcould ask them resend settlement to us? </td>
+                    <td class="a04">Let customer service assist in paying</td>
+                </tr>
+                <tr class="searchable" data-index="api/parameter game type parameter is dgt ? no,the display will be different">
+                    <td class="a02">api/parameter</td>
+                    <td class="a03">game type parameter is dgt ?</td>
+                    <td class="a04">No,the display will be different</td>
+                </tr>
+                <tr class="searchable" data-index="validbet definition of valid bets take baccarat as an example. players have five types of bets that can be bet. the following situations can be offset by each other: zhuang, xian, for example. say: if the player bets 10 chips and 20 chips respectively, then the effective bet is 10 chips (the game will be offset), but the total amount is 30 chips.">
+                    <td class="a02">validBet</td>
+                    <td class="a03">Definition of valid bets</td>
+                    <td class="a04">Take baccarat as an example. Players have five types of bets that can be bet. The following situations can be offset by each other: Zhuang, Xian, for example. Say: If the player bets 10 chips and 20 chips respectively, then the effective bet is 10 chips (the game will be offset), but the total amount is 30 chips.</td>
+                </tr>
+                <tr class="searchable" data-index="api/parameter what are the parameters of the srcresults result? in the case of baccarat, if the dealer and the player do not have a card, they must also return a null value.">
+                    <td class="a02">api/parameter</td>
+                    <td class="a03">What are the parameters of the srcResults result?</td>
+                    <td class="a04">In the case of baccarat, if the dealer and the player do not have a card, they must also return a null value.</td>
+                </tr>
+                <tr class="searchable" data-index="api/parameter why can't i fetch six-month data ? the data will be retained for three months and the previous data will be backed up to other databases.if you need the previous data, we can export it from the backup repository.">
+                    <td class="a02">api/parameter</td>
+                    <td class="a03">why can't I fetch six-month data ? </td>
+                    <td class="a04">The data will be retained for three months and the previous data will be backed up to other databases.If you need the previous data, we can export it from the backup repository.</td>
+                </tr>
+                <tr class="searchable" data-index="api/parameter how to tell if the bet is valid? it can be judged by betmap that if the array in betmap is empty, it means that the user has failed to place a bet.">
+                    <td class="a02">api/parameter</td>
+                    <td class="a03">How to tell if the bet is valid?</td>
+                    <td class="a04">It can be judged by BetMap that if the array in BetMap is empty, it means that the user has failed to place a bet.</td>
+                </tr>
+                <tr class="searchable" data-index="api/parameter/token why token access authentication fail? (status=410) every time the user login into the game by using username and password ,the channel web api need to return a new accesstoken to the ebet server,">
+                    <td class="a02">api/parameter/Token </td>
+                    <td class="a03">Why token access authentication fail? (status=410)</td>
+                    <td class="a04">Every time the user login into the game by using username and password ,the channel web api need to return a new accessToken to the eBET server, </td>
+                </tr>
+                <tr class="searchable" data-index="api/parameter/token token value is generated by channel s system itself? the token value and the token lifetime can be set by the channel system.">
+                    <td class="a02">api/parameter/Token </td>
+                    <td class="a03">Token value is generated by channel s system itself? </td>
+                    <td class="a04">The token value and the token lifetime can be set by the channel system.</td>
+                </tr>
+                <tr class="searchable" data-index="api/parameter the rechrage api returns a status of 200, indicating that the recharge was successful? requesting the recharge api to return status 200 means that the execution was successful, not the transfer was successful.">
+                    <td class="a02">api/parameter</td>
+                    <td class="a03">The rechrage API returns a status of 200, indicating that the recharge was successful?</td>
+                    <td class="a04">Requesting the recharge API to return status 200 means that the execution was successful, not the transfer was successful.</td>
+                </tr>
+                <tr class="searchable" data-index="api/parameter if you want to query whether the recharge is successful, which api should you request? the rechargestatus api returns a status of 200, indicating that the transfer has been successful.">
+                    <td class="a02">api/parameter</td>
+                    <td class="a03">If you want to query whether the recharge is successful, which API should you request?</td>
+                    <td class="a04">The rechargeStatus API returns a status of 200, indicating that the transfer has been successful.</td>
+                </tr>
+                <tr class="searchable" data-index="api/parameter what does it mean to return error code 201? it means seqno is repeated. if there is the same seqno, it means that the request is resent.if we do not receive a response to the request, we will resend the request, and if you have processed successfully, it will return 201.">
+                    <td class="a02">api/parameter</td>
+                    <td class="a03">What does it mean to return error code 201?</td>
+                    <td class="a04">It means seqNo is repeated. If there is the same seqNo, it means that the request is resent.If we do not receive a response to the request, we will resend the request, and if you have processed successfully, it will return 201.</td>
+                </tr>
+                <tr class="searchable" data-index="api/parameter/format what are the format restrictions on the username and password for logging into the game? at present, the account password is less than 14 characters in length, and is composed of lowercase english and numbers.">
+                    <!--23-->
+                    <td class="a02">api/parameter/format</td>
+                    <td class="a03">What are the format restrictions on the username and password for logging into the game?</td>
+                    <td class="a04">At present, the account password is less than 14 characters in length, and is composed of lowercase English and numbers.</td>
+                </tr>
+                <tr class="searchable" data-index="api/parameter which api is the money outgoing ? the money parameter in the recharge api is negative">
+                    <td class="a02">api/parameter</td>
+                    <td class="a03">which API is the money outgoing ?</td>
+                    <td class="a04">The money parameter in the recharge API is negative</td>
+                </tr>
+                <tr class="searchable" data-index="api how is the timeout for each request? 30 seconds ">
+                    <td class="a02">api</td>
+                    <td class="a03">how is the timeout for each request?</td>
+                    <td class="a04">30 seconds </td>
+                </tr>
+                <tr class="searchable" data-index="api can i query multiple users' information in batches? no, the current api can only query a single user message.">
+                    <td class="a02">api</td>
+                    <td class="a03">Can I query multiple users' information in batches?</td>
+                    <td class="a04">No, the current API can only query a single user message.</td>
+                </tr>
+                <tr class="searchable" data-index="subchannel can channel providers customize subchannel id? o, whenever you create a new subchannel system, the subchannel id is automatically defined and cannot be changed.">
+                    <td class="a02">subChannel</td>
+                    <td class="a03">Can channel providers customize subChannel ID?</td>
+                    <td class="a04">o, whenever you create a new subChannel system, the subChannel ID is automatically defined and cannot be changed.</td>
+                </tr>
+                <tr class="searchable" data-index="server can i set up multiple login verification urls? no, there is only one set of authentication urls for one channel">
+                    <td class="a02">server</td>
+                    <td class="a03">Can I set up multiple login verification URLs?</td>
+                    <td class="a04">No, there is only one set of authentication URLs for one channel</td>
+                </tr>
+                <tr class="searchable" data-index="language can i change the language before logging in? this part is currently not available.">
+                    <td class="a02">language</td>
+                    <td class="a03">Can I change the language before logging in?</td>
+                    <td class="a04">This part is currently not available.</td>
+                </tr>
+                <tr class="searchable" data-index="key the key for  subchannel the same as the key for the  channel? yes">
+                    <td class="a02">key</td>
+                    <td class="a03">the key for  subchannel the same as the key for the  channel?</td>
+                    <td class="a04">yes</td>
+                </tr>
+                <tr class="searchable" data-index="token after the user logs in, click on the ebet lobby instead of logging in again. token loging">
+                    <td class="a02">token</td>
+                    <td class="a03">After the user logs in, click on the EBET lobby instead of logging in again.</td>
+                    <td class="a04">token loging</td>
+                </tr>
+                <tr class="searchable" data-index="wallet the ebet file mentions the multi-wallet and single wallet mode, so do you confirm that the multi-wallet refers to the transfer api? the single wallet mode is the channel mode that the wallet is managed by you. the player verification amount is synchronized by the channel party. the ordinary wallet mode is that the wallet is verified by both parties. the channel mode player verification is done by you, and the change of the amount is calculated by us. and you need to call our api to confirm the player amount, as well as the recharge function, etc.">
+                    <td class="a02">wallet</td>
+                    <td class="a03">The EBET file mentions the multi-wallet and single wallet mode, so do you confirm that the multi-wallet refers to the transfer API?</td>
+                    <td class="a04">The single wallet mode is the channel mode that the wallet is managed by you. The player verification amount is synchronized by the channel party. The ordinary wallet mode is that the wallet is verified by both parties. The channel mode player verification is done by you, and the change of the amount is calculated by us. And you need to call our API to confirm the player amount, as well as the recharge function, etc.</td>
+                </tr>
+                <tr class="searchable" data-index="userbethistory can i only view a few specified user betting records? no, you can only see a user bet record, or all users of a channel, or all users of a sub-channel, or a user bet record for a start time and an end time.">
+                    <td class="a02">userbethistory</td>
+                    <td class="a03">Can I only view a few specified user betting records?</td>
+                    <td class="a04">No, you can only see a user bet record, or all users of a channel, or all users of a sub-channel, or a user bet record for a start time and an end time.</td>
+                </tr>
+                <tr class="searchable" data-index="api is there any restrictions on calling your api? in the formal environment, our api call limit is 500 times a minute; however, in the test environment, our api call limit is 60 times in 1 minute.">
+                    <td class="a02">api</td>
+                    <td class="a03">Is there any restrictions on calling your API?</td>
+                    <td class="a04">In the formal environment, our API call limit is 500 times a minute; however, in the test environment, our API call limit is 60 times in 1 minute.</td>
+                </tr>
+                <tr class="searchable" data-index="backend/subchannel how can i create a subchannel? please log in to the channel backend first.click on 'management center' on the left and select 'sub-channel management'.">
+                    <td class="a02">backend/subchannel</td>
+                    <td class="a03">How can I create a subchannel?</td>
+                    <td class="a04">Please log in to the channel backend first.Click on 'Management Center' on the left and select 'Sub-Channel Management'.</td>
+                </tr>
+                <tr class="searchable" data-index="backend/subchannel channel and sub channel name can have same username? no, because not able to differentiate the user is from which sub channel. for avoid conflict create username concatenation with channel prefix name.">
+                    <td class="a02">backend/subchannel</td>
+                    <td class="a03">Channel and sub Channel name can have same username? </td>
+                    <td class="a04">No, because not able to differentiate the user is from which sub channel. For avoid conflict create username concatenation with channel prefix name. </td>
+                </tr>
+                <tr class="searchable" data-index="whitelist if the game whitelist is not set, it can be accessed by default. if you are in a restricted area, you must add white.">
+                    <!--37-->
+                    <td class="a02">whitelist</td>
+                    <td class="a03">If the game whitelist is not set, it can be accessed by default.</td>
+                    <td class="a04">If you are in a restricted area, you must add white.</td>
+                </tr>
+                <tr class="searchable" data-index="api/subchannel how can i tell which  subchannel a player belongs to? you can use the userinfo api to query.">
+                    <td class="a02">api/subchannel</td>
+                    <td class="a03">How can I tell which  subchannel a player belongs to?</td>
+                    <td class="a04">You can use the userInfo api to query.</td>
+                </tr>
+                <tr class="searchable" data-index="api/time what is the time format used by the apis? our company supports two formats for query. 1. yyyy-mm-dd hh:mm:ss for time zone utc+ 8 2. yyyy-mm-ddthh:mm:ssz for time zone utc+ 0">
+                    <td class="a02">api/time</td>
+                    <td class="a03">What is the time format used by the apis?</td>
+                    <td class="a04">
+                        Our company supports two formats for query.<br>
+                        1. yyyy-MM-dd HH:mm:ss for time zone UTC+ 8<br>
+                        2. yyyy-MM-ddTHH:mm:ssZ for time zone UTC+ 0
+                    </td>
+                </tr>
+                <tr class="searchable" data-index="api/parameter can i recharge multiple users in batches? can not.">
+                    <td class="a02">api/parameter</td>
+                    <td class="a03">Can I recharge multiple users in batches?</td>
+                    <td class="a04">Can not.</td>
+                </tr>
+                <tr class="searchable" data-index="api/parameter if frequent recharge is ok? no, it is recommended for 1-2 minutes, otherwise the ebat server will return to the system busy and the recharge will fail.">
+                    <td class="a02">api/parameter</td>
+                    <td class="a03">If frequent recharge is OK?</td>
+                    <td class="a04">No, it is recommended for 1-2 minutes, otherwise the ebat server will return to the system busy and the recharge will fail.</td>
+                </tr>
+                <tr class="searchable" data-index="whitelist restricted areas are those? singapore, usa, macau, hong kong, taiwan and philippines">
+                    <td class="a02">whitelist</td>
+                    <td class="a03">Restricted areas are those?</td>
+                    <td class="a04">Singapore, USA, Macau, Hong Kong, Taiwan and Philippines</td>
+                </tr>
+                <tr class="searchable" data-index="api/parameter what is the order sequence requests(types 1,2,27,28) of niuniu bet on double? the first request (type) 27, second 1 ,  third 28 , the last 2,need to respond to 200,triggering the next request.">
+                    <td class="a02">api/parameter</td>
+                    <td class="a03">what is the order sequence requests(types 1,2,27,28) of NiuNiu bet on double?</td>
+                    <td class="a04">the first request (type) 27, second 1 ,  third 28 , the last 2,need to respond to 200,triggering the next request.</td>
+                </tr>
+                <tr class="searchable" data-index="api/parameter what does it mean if the array inside betmap is empty? if the array inside betmap is empty, it means the user has failed to place a bet.">
+                    <td class="a02">api/parameter</td>
+                    <td class="a03">What does it mean if the array inside BetMap is empty?</td>
+                    <td class="a04">If the array inside BetMap is empty, it means the user has failed to place a bet.</td>
+                </tr>
+                <tr class="searchable" data-index="api/parameter does username have support for special symbols? username only accepts lowercase english letters and numbers.">
+                    <td class="a02">api/parameter</td>
+                    <td class="a03">Does username have support for special symbols?</td>
+                    <td class="a04">Username only accepts lowercase English letters and numbers.</td>
+                </tr>
+                <tr class="searchable" data-index="api/parameter both gametype and dgt are parameters that can be set when player logged in by token.what is the difference between the two? gametype can be used on h5 and app, while dgt can only be used on h5.">
+                    <td class="a02">api/parameter</td>
+                    <td class="a03">Both gameType and dgt are parameters that can be set when player logged in by Token.What is the difference between the two?</td>
+                    <td class="a04">GameType can be used on H5 and app, while dgt can only be used on H5.</td>
+                </tr>
+                <tr class="searchable" data-index="api/parameter can we log in directly to the lobby of a specific game type? yes, add the gametype or dgt parameter in the accesstoken login link.">
+                    <td class="a02">api/parameter</td>
+                    <td class="a03">Can we log in directly to the lobby of a specific game type?</td>
+                    <td class="a04">Yes, add the gameType or dgt parameter in the accessToken login link.</td>
+                </tr>
+                <tr class="searchable" data-index="url the game url link add other parameters will affect it? no, we will only refer to the required parameters.">
+                    <td class="a02">URL</td>
+                    <td class="a03">the game URL link add other parameters will affect it?</td>
+                    <td class="a04">No, we will only refer to the required parameters.</td>
+                </tr>
+                <tr class="searchable" data-index="backend/subchannel we accidentally create wrong subchannel in bo, possible to delete? no, but can limit subchannel permissions">
+                    <td class="a02">backend/subchannel</td>
+                    <td class="a03">We accidentally create wrong subchannel in BO, possible to delete?</td>
+                    <td class="a04">No, but can limit subchannel permissions</td>
+                </tr>
+                <tr class="searchable" data-index="api/parameter will the api/userbethistory api be able to return the payout for each bet? no, currently payout can only return the total payout of the board.">
+                    <!--50-->
+                    <td class="a02">api/parameter</td>
+                    <td class="a03">Will the api/userbethistory API be able to return the payout for each bet?</td>
+                    <td class="a04">No, currently payout can only return the total payout of the board.</td>
+                </tr>
+                <tr class="searchable" data-index="api/parameter can the username be added with '_'? it is not recommended to have '?', '/', '=', '&'">
+                    <td class="a02">api/parameter</td>
+                    <td class="a03">Can the username be added with "_"?</td>
+                    <td class="a04">It is not recommended to have "?", "/", "=", "&"</td>
+                </tr>
+                <tr class="searchable" data-index="api/parameter if the bet fails, will the bet parameter of the response be set to 0? if the bet fails, the bet will not necessarily be 0, but the betmap must be an empty array.">
+                    <td class="a02">api/parameter</td>
+                    <td class="a03">If the bet fails, will the bet parameter of the response be set to 0?</td>
+                    <td class="a04">If the bet fails, the bet will not necessarily be 0, but the betmap must be an empty array.</td>
+                </tr>
+                <tr class="searchable" data-index="api/parameter is it possible to query the user's online status and kicks him off the line. we did not provide this part of the function">
+                    <td class="a02">api/parameter</td>
+                    <td class="a03">Is it possible to query the user's online status and kicks him off the line.</td>
+                    <td class="a04">We did not provide this part of the function</td>
+                </tr>
+                <tr class="searchable" data-index="api/parameter return 4202 when accessing the api 4202 means that you visited the api too frequently.">
+                    <td class="a02">api/parameter</td>
+                    <td class="a03">Return 4202 when accessing the api</td>
+                    <td class="a04">4202 means that you visited the api too frequently.</td>
+                </tr>
+                <tr class="searchable" data-index="url is there a link to a single pg game? i have not provided this part of the single pg game.">
+                    <td class="a02">URL</td>
+                    <td class="a03">Is there a link to a single PG game?</td>
+                    <td class="a04">I have not provided this part of the single PG game.</td>
+                </tr>
+                <tr class="searchable" data-index="api what are the apis for request by the channel? registerorlogin,synccredit,increasecredit,queryincreasecreditrecord,refundsinglewallet,autobatchrefund">
+                    <td class="a02">api</td>
+                    <td class="a03">What are the APIs for request by the channel?</td>
+                    <td class="a04">registerOrLogin,syncCredit,increaseCredit,queryIncreaseCreditRecord,refundSingleWallet,autoBatchRefund</td>
+                </tr>
+                <tr class="searchable" data-index="api what are the apis for request by the ebet? syncuser,userinfo,recharge,rechargestatus,userbethistory,getusermoney,usertransaction,getbetlimit,updatebetlimit,getseqnorecord,userbetsummary,userbetsummary,getcurrentluzhu">
+                    <td class="a02">api</td>
+                    <td class="a03">What are the APIs for request by the eBet?</td>
+                    <td class="a04">syncuser,userinfo,recharge,rechargestatus,userbethistory,getusermoney,usertransaction,getbetlimit,updatebetlimit,getseqnorecord,userbetsummary,userbetsummary,getcurrentluzhu</td>
+                </tr>
+                <tr class="searchable" data-index="backend/list on the backend, why is the record in 'betting record' inconsistent with those in the credit list? it may be caused by the failure of the bet payout. you can select the 'failed payout' button in the menu, and then you will find the bet data.">
+                    <td class="a02">backend/list</td>
+                    <td class="a03">On the backend, Why is the record in "betting record" inconsistent with those in the credit list?</td>
+                    <td class="a04">It may be caused by the failure of the bet payout. You can select the "failed payout" button in the menu, and then you will find the bet data.</td>
+                </tr>
+                <tr class="searchable" data-index="backend/list what does withholding mean in the reporting tool on the backend? this would only happen in the bullbull game. when the player bets double, according to the rules, the dealer deducts the player's money.">
+                    <td class="a02">backend/list</td>
+                    <td class="a03">What does withholding mean in the reporting tool on the backend?</td>
+                    <td class="a04">This would only happen in the BullBull game. When the player bets double, according to the rules, the dealer deducts the player's money.</td>
+                </tr>
+                <tr class="searchable" data-index="api can i repeat the recharge in a short time? it is recommended that 1-2 minutes or not, the ebet server will return to the system busy and the recharge will fail.">
+                    <td class="a02">api</td>
+                    <td class="a03">Can I repeat the recharge in a short time?</td>
+                    <td class="a04">It is recommended that 1-2 minutes or not, the ebet server will return to the system busy and the recharge will fail.</td>
+                </tr>
+                <tr class="searchable" data-index="api is there a delay in userbethistory? real-time query is best to delay 2~3 minutes in the query">
+                    <td class="a02">api</td>
+                    <td class="a03">Is there a delay in userbethistory?</td>
+                    <td class="a04">Real-time query is best to delay 2~3 minutes in the query</td>
+                </tr>
+                <tr class="searchable" data-index="api/parameter what does the error code 5006 mean? drawnotenabledingame">
+                    <td class="a02">api/parameter</td>
+                    <td class="a03">What does the error code 5006 mean?</td>
+                    <td class="a04">drawNotEnabledinGame</td>
+                </tr>
+                <tr class="searchable" data-index="user can i check the user's bet record and have a garbled username? the garbled username is the data of the test user, and you need to filter it yourself when you get the bet record.">
+                    <td class="a02">user</td>
+                    <td class="a03">Can I check the user's bet record and have a garbled username?</td>
+                    <td class="a04">The garbled username is the data of the test user, and you need to filter it yourself when you get the bet record.</td>
+                </tr>
+                <tr class="searchable" data-index="api/parameter under what conditions will the code 5006 be returned? if the recharge api calls when player is betting ,it will return 5006.">
+                    <td class="a02">api/parameter</td>
+                    <td class="a03">Under what conditions will the code 5006 be returned?</td>
+                    <td class="a04">If the recharge api calls when player is betting ,it will return 5006.</td>
+                </tr>
+                <tr class="searchable" data-index="api in the bullbull game, why would i receive a increasecredit request of type 11? when the player's withholding amount is sufficient and the bet amount is insufficient, the request will be sent in order to imform channel to refund.">
+                    <!--65-->
+                    <td class="a02">api</td>
+                    <td class="a03">In the BullBull game, why would I receive a increaseCredit request of type 11?</td>
+                    <td class="a04">When the player's withholding amount is sufficient and the bet amount is insufficient, the request will be sent in order to imform channel to refund.</td>
+                </tr>
+                <tr class="searchable" data-index="api/parameter what is the problem with using the api to return 4207? no valid api access ip needs to be added to the whitelist">
+                    <td class="a02">api/parameter</td>
+                    <td class="a03">What is the problem with using the API to return 4207?</td>
+                    <td class="a04">No valid API access IP needs to be added to the whitelist</td>
+                </tr>
+                <tr class="searchable" data-index="api/parameter what is the platform parameter in increasecredit? know the type of game platform that the player is operating">
+                    <td class="a02">api/parameter</td>
+                    <td class="a03">What is the platform parameter in increaseCredit?</td>
+                    <td class="a04">Know the type of game platform that the player is operating</td>
+                </tr>
+                <tr class="searchable" data-index="api/parameter what is the new type of bullbull transaction? type 27 withholding, type 28 withholdingrefund">
+                    <td class="a02">api/parameter</td>
+                    <td class="a03">What is the new type of bullbull transaction?</td>
+                    <td class="a04">Type 27 Withholding, type 28 WithholdingRefund</td>
+                </tr>
+                <tr class="searchable" data-index="api/parameter bullbull bet withholdingrefund failed but no payout? because the withholdingrefund fail, there will be no payout requests.">
+                    <td class="a02">api/parameter</td>
+                    <td class="a03">Bullbull bet WithholdingRefund failed but no payout?</td>
+                    <td class="a04">Because the WithholdingRefund fail, there will be no payout requests.</td>
+                </tr>
+                <tr class="searchable" data-index="develop what is the development mode of ebet, can h5 be opened in the webview control? we are using a hybrid development model and you can open ebet using webview.">
+                    <td class="a02">develop</td>
+                    <td class="a03">What is the development mode of ebet, can h5 be opened in the webView control?</td>
+                    <td class="a04">We are using a hybrid development model and you can open ebet using webview.</td>
+                </tr>
+                <tr class="searchable" data-index="exit can i leave ebet with one click and jump to my channel page? yes, the following link is an example, 'http://47.90.11.101:8882/?infourl=111111&exiturl=https://www.baidu.com/', this link can jump to baidu's website.">
+                    <td class="a02">exit</td>
+                    <td class="a03">Can I leave ebet with one click and jump to my channel page?</td>
+                    <td class="a04">Yes, the following link is an example, 'http://47.90.11.101:8882/?infoUrl=111111&exitUrl=https://www.baidu.com/', this link can jump to Baidu's website.</td>
+                </tr>
+                <tr class="searchable" data-index="api/parameter rechargestatus  appears status -1 request parameter rechargereqid does not exist">
+                    <td class="a02">api/parameter</td>
+                    <td class="a03">rechargestatus  appears status -1</td>
+                    <td class="a04">Request parameter rechargeReqId does not exist</td>
+                </tr>
+                <tr class="searchable" data-index="loging change login verification address, but can't log in accesstoken has a special symbol that prevents login">
+                    <td class="a02">loging</td>
+                    <td class="a03">Change login verification address, but can't log in</td>
+                    <td class="a04">accessToken has a special symbol that prevents login</td>
+                </tr>
+                <tr class="searchable" data-index="api why do i receive status 5004 which means single wallet does not have this feature? the three apis of getusermoney, recharge, and rechargestatus are only required for multiple wallets. if requests these three apis on the single wallet channel, it will return 5004.">
+                    <td class="a02">api</td>
+                    <td class="a03">Why do I receive status 5004 which means Single wallet does not have this feature?</td>
+                    <td class="a04">The three apis of getUserMoney, recharge, and rechargeStatus are only required for multiple wallets. If requests these three apis on the single wallet channel, it will return 5004.</td>
+                </tr>
+                <tr class="searchable" data-index="api why do i receive status 5005 which means wallet not enabled? multi-wallets are divided into ordinary wallets, e-wallets, and live wallets. if your company wants to recharge to an unopened wallet, it will return 5005 wallets.">
+                    <!--75-->
+                    <td class="a02">api</td>
+                    <td class="a03">Why do I receive status 5005 which means wallet not enabled?</td>
+                    <td class="a04">Multi-wallets are divided into ordinary wallets, e-wallets, and live wallets. If your company wants to recharge to an unopened wallet, it will return 5005 wallets.</td>
+                </tr>
+                <tr class="searchable" data-index="api reissue the payouts, what day do they want to take the bethistory? date of reissue">
+                    <td class="a02">api</td>
+                    <td class="a03">Reissue the payouts, what day do they want to take the bethistory?</td>
+                    <td class="a04">Date of reissue</td>
+                </tr>
+                <tr class="searchable" data-index="api srcresults:[5,6,null,42,27,null] can i omit null? no, it will cause 500 to be unable to payout">
+                    <td class="a02">api</td>
+                    <td class="a03">srcResults:[5,6,null,42,27,null] Can I omit null?</td>
+                    <td class="a04">No, it will cause 500 to be unable to payout</td>
+                </tr>
+                <tr class="searchable" data-index="api whether the end of the server address can be (synccredit.php) instead of (synccredit)? the end is fixed and cannot be corrected">
+                    <td class="a02">api</td>
+                    <td class="a03">Whether the end of the server address can be (syncCredit.php) instead of (syncCredit)?</td>
+                    <td class="a04">The end is fixed and cannot be corrected</td>
+                </tr>
+                <tr class="searchable" data-index="login why can't i use gestures or fingerprint login? each time the user logs in with the username and password, the channel api should return a new token to the ebet server. after the user quits the game (not the account), the user can log in with gestures or fingerprints.">
+                    <td class="a02">login</td>
+                    <td class="a03">Why can't I use gestures or fingerprint login?</td>
+                    <td class="a04">Each time the user logs in with the username and password, the channel API should return a new token to the eBET server. After the user quits the game (not the account), the user can log in with gestures or fingerprints.</td>
+                </tr>
+                <tr class="searchable" data-index="api/parameter what is the type of bet bonus? the bet bonus will be type= 6 with increasecredit">
+                    <td class="a02">api/parameter</td>
+                    <td class="a03">What is the type of bet bonus?</td>
+                    <td class="a04">The bet bonus will be type= 6 with increaseCredit</td>
+                </tr>
+                <tr class="searchable" data-index="api the front end does not show the record of the red envelope winning? because the channel is a single wallet, it will not be displayed on the front end if it does not return a message that was successfully processed.">
+                    <td class="a02">api</td>
+                    <td class="a03">The front end does not show the record of the red envelope winning?</td>
+                    <td class="a04">Because the channel is a single wallet, it will not be displayed on the front end if it does not return a message that was successfully processed.</td>
+                </tr>
+                <tr class="searchable" data-index="api/betlimit could i set betlimit of whole channel by api? no, you need to imform us to assist you.">
+                    <td class="a02">api/betlimit</td>
+                    <td class="a03">Could I set betlimit of whole channel by api?</td>
+                    <td class="a04">No, you need to imform us to assist you.</td>
+                </tr>
+                <tr class="searchable" data-index="api/betlimit what is the function of getbetlimit and updatebetlimit api? you can query player's betlimit by getbetlimit and set player's betlimit by updatebetlimit.">
+                    <td class="a02">api/betlimit</td>
+                    <td class="a03">What is the function of getbetlimit and updatebetlimit api?</td>
+                    <td class="a04">You can query player's betlimit by getbetlimit and set player's betlimit by updatebetlimit. </td>
+                </tr>
+                <tr class="searchable" data-index="api when the system or the network is abnormal, the abnormality causes the player not to receive it. where can i view it? api userbethistory, if the return singular array [] is a bet failure.">
+                    <td class="a02">api</td>
+                    <td class="a03">When the system or the network is abnormal, the abnormality causes the player not to receive it. Where can I view it?</td>
+                    <td class="a04">API userbethistory, if the return singular array [] is a bet failure.</td>
+                </tr>
+                <tr class="searchable" data-index="backend how many groups can  be in a multiple bet range? 5 groups">
+                    <td class="a02">backend</td>
+                    <td class="a03">How many groups can  be in a multiple bet range?</td>
+                    <td class="a04">5 groups</td>
+                </tr>
+                <tr class="searchable" data-index="api can channel user creation create a user without calling the <'syncuser'> api, but automatically create a user by ebet when logging in to the ebet platform via token? yes, the channel can be automatically created by our party through token login.">
+                    <td class="a02">api</td>
+                    <td class="a03">Can channel user creation create a user without calling the <'syncuser'> API, but automatically create a user by ebet when logging in to the ebet platform via Token?</td>
+                    <td class="a04">Yes, the channel can be automatically created by our party through token login.</td>
+                </tr>
+                <tr class="searchable" data-index="api user information (sent to the channel api after successful login) does the single wallet need to be implemented? a single wallet isn't needed to be implemented.">
+                    <!--86-->
+                    <td class="a02">api</td>
+                    <td class="a03">User information (sent to the channel API after successful login) Does the single wallet need to be implemented?</td>
+                    <td class="a04">A single wallet isn't needed to be implemented.</td>
+                </tr>
+                <tr class="searchable" data-index="slot can i open a slot game in my channel? yes, but slot game do not support indonesian and vietnamese currencies.">
+                    <td class="a02">slot</td>
+                    <td class="a03">Can I open a slot game in my channel?</td>
+                    <td class="a04">Yes, but slot game do not support Indonesian and Vietnamese currencies.</td>
+                </tr>
+                <tr class="searchable" data-index="api/usebethistory after the game, when can i get the game record (userbethistory)? it is recommended to request the bethistory after 3~5 minutes the end of the payout.">
+                    <td class="a02">api/usebethistory</td>
+                    <td class="a03">After the game, when can I get the game record (userbethistory)?</td>
+                    <td class="a04">It is recommended to request the bethistory after 3~5 minutes the end of the payout.</td>
+                </tr>
+                <tr class="searchable" data-index="api which parameters can help identifying developers? after we log in (registerorloginreq), we will send userinfo again, and the other party can identify it.">
+                    <td class="a02">api</td>
+                    <td class="a03">Which parameters can help identifying developers?</td>
+                    <td class="a04">After we log in (RegisterOrLoginReq), we will send userInfo again, and the other party can identify it.</td>
+                </tr>
+                <tr class="searchable" data-index="front end member is banned repeat the same sentence three times in succession or the system detects the same word three times within 5 minutes.">
+                    <td class="a02">front end</td>
+                    <td class="a03">Member is banned</td>
+                    <td class="a04">Repeat the same sentence three times in succession or the system detects the same word three times within 5 minutes.</td>
+                </tr>
+                <tr class="searchable" data-index="front end/video how long will the record video of the bet be saved? the record will be saved for three days.">
+                    <td class="a02">front end/video</td>
+                    <td class="a03">How long will the record video of the bet be saved?</td>
+                    <td class="a04">The record will be saved for three days.</td>
+                </tr>
+                <tr class="searchable" data-index="bet why is a bet failed? it may be caused by network fluctuations.">
+                    <td class="a02">bet</td>
+                    <td class="a03">Why is a bet failed?</td>
+                    <td class="a04">It may be caused by network fluctuations.</td>
+                </tr>
+                <tr class="searchable" data-index="api syncuser status:202 need to be set in the header , contenttype : application/json">
+                    <td class="a02">api</td>
+                    <td class="a03">syncuser status:202</td>
+                    <td class="a04">Need to be set in the header , contentType : application/JSON</td>
+                </tr>
+                <tr class="searchable" data-index="backend describle the channel verification api address when the player logs in, the verification data of the player is transmitted by our system to your company for inspection.">
+                    <td class="a02">backend</td>
+                    <td class="a03">Describle the Channel verification API address </td>
+                    <td class="a04">When the player logs in, the verification data of the player is transmitted by our system to your company for inspection.</td>
+                </tr>
+                <tr class="searchable" data-index="ban why is a player banned from speaking? the following are the reasons:1. player repeats the same words three times in five minutes.2. player refer to sensitive words or advertisements.">
+                    <td class="a02">ban</td>
+                    <td class="a03">Why is a player banned from speaking?</td>
+                    <td class="a04">
+                        The following are the reasons:<br>
+                        1. Player repeats the same words three times in five minutes.<br>
+                        2. Player refer to sensitive words or advertisements.
+                    </td>
+                </tr>
+                <tr class="searchable" data-index="login what is the login verification address? the login verification address is the address that we send the request to your company to verify the identity of the user when logging in.">
+                    <td class="a02">login</td>
+                    <td class="a03">What is the login verification address?</td>
+                    <td class="a04">The login verification address is the address that we send the request to your company to verify the identity of the user when logging in.</td>
+                </tr>
+                <tr class="searchable" data-index="api/parameter what do you mean by niuniu payout results: [300]? niuniu payout results: [300] represents zhuang win.">
+                    <td class="a02">api/parameter</td>
+                    <td class="a03">What do you mean by NiuNiu payout Results: [300]?</td>
+                    <td class="a04">NiuNiu payout Results: [300] represents Zhuang Win.</td>
+                </tr>
+                <tr class="searchable" data-index="single wallet what is the single wallet service address? the single wallet service address is the address (rul) that the channel provides for our single wallet transaction api request.">
+                    <td class="a02">single wallet</td>
+                    <td class="a03">What is the single wallet service address?</td>
+                    <td class="a04">The single wallet service address is the address (RUL) that the channel provides for our single wallet transaction API request.</td>
+                </tr>
+                <tr class="searchable" data-index="api connect ehostunreach xx.xx.xxx.192:80 we request ip to be whitelist">
+                    <!--100-->
+                    <td class="a02">api</td>
+                    <td class="a03">connect EHOSTUNREACH XX.XX.XXX.192:80</td>
+                    <td class="a04">We request IP to be whitelist</td>
+                </tr>
+            </tbody>
+        </table>
+        <span id="spanFirst" style="position:relative;left:0%;">First</span>
+        <span id="spanPret" style="position:relative;left:20%;">Pre</span>
+        <span id="spanNext" style="position:relative;left:60%;">Next</span>
+        <span id="spanLast" style="position:relative;left:80%;">Last</span>
+        <span style="position:relative;left:34%;" id="pages02">Pages</span><span id="spanPageNum" style="position:relative;left:35%;"></span><span style="position:relative;left:36%;" id="of02">of</span><span style="position:relative;left:37%;" id="spanTotalPage"></span>
+    </div>
+
+    <script>
+        var theTable = document.getElementById("tablelsw");
+        var totalPage = document.getElementById("spanTotalPage");
+        var pageNum = document.getElementById("spanPageNum");
+        var spanPre = document.getElementById("spanPret");
+        var spanNext = document.getElementById("spanNext");
+        var spanFirst = document.getElementById("spanFirst");
+        var spanLast = document.getElementById("spanLast");
+        var totalPaget = document.getElementById("spanTotalPaget");
+        var pageNumt = document.getElementById("spanPageNumt");
+        var spanPret = document.getElementById("spanPrett");
+        var spanNextt = document.getElementById("spanNextt");
+        var spanFirstt = document.getElementById("spanFirstt");
+        var spanLastt = document.getElementById("spanLastt");
+        var pages01 = document.getElementById("pages01");
+        var pages02 = document.getElementById("pages02");
+        var of01 = document.getElementById("of01");
+        var of02 = document.getElementById("of02");
+        var numberRowsInTable = theTable.rows.length;
+        var pageSize = 10;
+        var page = 1;
+
+        var run = true;
+
+        if (run) {
+            //Next
+            function next() {
+
+                hideTable();
+
+                currentRow = pageSize * page;
+                maxRow = currentRow + pageSize;
+                if (maxRow > numberRowsInTable) maxRow = numberRowsInTable;
+                for (var i = currentRow; i < maxRow; i++) {
+                    theTable.rows[i].style.display = '';
+                }
+                page++;
+
+                if (maxRow == numberRowsInTable) { nextText(); lastText(); }
+                showPage();
+                preLink();
+                firstLink();
+            }
+
+            //Pre
+            function pre() {
+
+                hideTable();
+
+                page--;
+
+                currentRow = pageSize * page;
+                maxRow = currentRow - pageSize;
+                if (currentRow > numberRowsInTable) currentRow = numberRowsInTable;
+                for (var i = maxRow; i < currentRow; i++) {
+                    theTable.rows[i].style.display = '';
+                }
+
+
+                if (maxRow == 0) { preText(); firstText(); }
+                showPage();
+                nextLink();
+                lastLink();
+            }
+
+            //First
+            function first() {
+                hideTable();
+                page = 1;
+                for (var i = 0; i < pageSize; i++) {
+                    theTable.rows[i].style.display = '';
+                }
+                showPage();
+
+                preText();
+                nextLink();
+                lastLink();
+            }
+
+            //Last
+            function last() {
+                hideTable();
+                page = pageCount();
+                currentRow = pageSize * (page - 1);
+                for (var i = currentRow; i < numberRowsInTable; i++) {
+                    theTable.rows[i].style.display = '';
+                }
+                showPage();
+
+                preLink();
+                nextText();
+                firstLink();
+            }
+
+            function hideTable() {
+                for (var i = 0; i < numberRowsInTable; i++) {
+                    theTable.rows[i].style.display = 'none';
+                }
+            }
+
+            function showPage() {
+                pageNum.innerHTML = page;
+                pageNumt.innerHTML = page;
+            }
+
+            //Of
+            function pageCount() {
+                var count = 0;
+                if (numberRowsInTable % pageSize != 0) count = 1;
+                return parseInt(numberRowsInTable / pageSize) + count;
+            }
+
+            //print
+            function preLink() { spanPre.innerHTML = "<a href='javascript:pre();'>Pre</a>"; spanPret.innerHTML = "<a href='javascript:pre();'>Pre</a>"; }
+            function preText() { spanPre.innerHTML = "Pre"; spanPret.innerHTML = "Pre"; }
+
+            function nextLink() { spanNext.innerHTML = "<a href='javascript:next();'>Next</a>"; spanNextt.innerHTML = "<a href='javascript:next();'>Next</a>"; }
+            function nextText() { spanNext.innerHTML = "Next"; spanNextt.innerHTML = "Next"; }
+
+            function firstLink() { spanFirst.innerHTML = "<a href='javascript:first();'>First</a>"; spanFirstt.innerHTML = "<a href='javascript:first();'>First</a>"; }
+            function firstText() { spanFirst.innerHTML = "First"; spanFirstt.innerHTML = "First"; }
+
+            function lastLink() { spanLast.innerHTML = "<a href='javascript:last();'>Last</a>"; spanLastt.innerHTML = "<a href='javascript:last();'>Last</a>"; }
+            function lastText() { spanLast.innerHTML = "Last"; spanLastt.innerHTML = "Last"; }
+
+
+
+
+
+            //hidden
+            function hide() {
+                for (var i = pageSize; i < numberRowsInTable; i++) {
+                    theTable.rows[i].style.display = 'none';
+                }
+
+                totalPage.innerHTML = pageCount();
+                pageNum.innerHTML = '1';
+
+                totalPaget.innerHTML = pageCount();
+                pageNumt.innerHTML = '1';
+
+                nextLink();
+                lastLink();
+            }
+
+            hide();
+        };
+
+
+
+        var keyword = document.getElementById("paleBlue");
+        var text = document.getElementById("text");
+        var searchStyle = document.getElementById('search_style');
+
+        document.getElementById("text").addEventListener("input", function () {
+            if (!this.value) {
+                searchStyle.innerHTML = "";
+                window.location.reload();
+                return;
+            }
+            if (run) {
+                first();
+                run = false
+            };
+            spanFirst.style = "display: none;";
+            spanFirstt.style = "display: none;";
+            spanNext.style = "display: none;";
+            spanNextt.style = "display: none;";
+            spanPre.style = "display: none;";
+            spanPret.style = "display: none;";
+            spanLast.style = "display: none;";
+            spanLastt.style = "display: none;";
+            pageNum.style = "display: none;";
+            pageNumt.style = "display: none;";
+            totalPage.style = "display: none;";
+            totalPaget.style = "display: none;";
+            pages01.style = "display: none;";
+            pages02.style = "display: none;";
+            of01.style = "display: none;";
+            of02.style = "display: none;";
+            pageSize = 200;
+            next();
+            pre();
+            searchStyle.innerHTML = ".searchable:not([data-index*=\"" + this.value.toLowerCase() + "\"]) { display: none; }";
+        });
+
+    </script>
+    <script src="http://libs.baidu.com/jquery/1.7.2/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/mark.js/7.0.0/jquery.mark.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("input").on("input.highlight", function () {
+                var searchTerm = $(this).val();
+                $("#tablelsw").unmark().mark(searchTerm);
+            }).trigger("input.highlight").focus();
+        });
+    </script>
+    <script type="text/javascript">
+
+    </script>
+</body>
+
+</html>

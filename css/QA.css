@@ -1,0 +1,35 @@
+#QandA .Question { /*標題的CSS定義*/
+    width: 800px;
+    text-align: left;
+    position: relative;
+    right: 20%;
+    left: 20%;
+
+}
+
+#QandA .Answer { /*內文的CSS定義*/
+    display: none;
+    width: 800px;
+    position: relative;
+    right: 20%;
+    left: 20%;
+    background: #6d91ea;
+    text-align: left;
+}
+
+#QandA .Question:hover { /*標題的CSS定義*/
+    width: 800px;
+    text-align: left;
+    position: relative;
+    right: 20%;
+    left: 20%;
+    background-color: yellow;
+}
+.QandATitle {
+    width: 800px;
+    text-align: left;
+    position: relative;
+    right: 20%;
+    left: 20%;
+    font-size:30px;
+}

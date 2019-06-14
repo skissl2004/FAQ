@@ -1,0 +1,317 @@
+﻿<!DOCTYPE>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>eBet 技术支援</title>
+    <style id="search_style"></style>
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/component.css">
+    <link rel="stylesheet" href="css/custom-styles.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/search.css">
+    <link rel="stylesheet" href="css/demo.css">
+    <link rel="stylesheet" href="css/font-awesome-ie7.css">
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <style type="text/css">
+        mark {
+            background: yellow;
+            color: black;
+            font: bold;
+            font-size: 16px;
+            border:2px solid black;
+        }
+    </style>
+</head>
+
+ <body style="background-color:white;">
+     <label for="text" style="position:fixed;right:30px;top:175px;color:red;font-size:20px;"><u>搜尋關鍵字</u></label>
+     <input type="text" id="text" value="" placeholder="搜尋關鍵字" style="position:fixed;right:0;top:200px;">
+     <div style="width:90%">
+         <table>
+             <span id="spanFirstt" style="position:relative;left:0%;">首頁</span>
+             <span id="spanPrett" style="position:relative;left:20%;">上一頁</span>
+             <span id="spanNextt" style="position:relative;left:55%;">下一頁</span>
+             <span id="spanLastt" style="position:relative;left:76%;">尾頁</span>
+             <span style="position:relative;left:33%;" id="pages01">第</span>
+             <span id="spanPageNumt" style="position:relative;left:34%;"></span>
+             <span style="position:relative;left:35%;" id="of01">/</span>
+             <span style="position:relative;left:36%;" id="spanTotalPaget"></span>
+             <span style="position:relative;left:37%;" id="jacob01">頁</span>
+             <tr class="searchable1">
+                 <td class="a02">#標籤</td>
+                 <td class="a03">問題</td>
+                 <td class="a04">答案</td>
+             </tr>
+             <tbody id="tablelsw">
+                 <tr class="searchable" data-index="signature/加密/解密 signature字段，我是用公鑰加密它，還是用私鑰加密它？ signature加密用私鑰，解密用公鑰。">
+                     <td class="a02">signature/加密/解密</td>
+                     <td class="a03">signature字段，我是用公鑰加密它，還是用私鑰加密它？</td>
+                     <td class="a04">signature加密用私鑰，解密用公鑰。</td>
+                 </tr>
+                 <tr class="searchable" data-index="api/參數 在queryincreasecreditrecord這支api中, reqno與queryreqno的差異 reqno 是 ebet 產生, 用來記錄每一筆我們對貴方的 api 請求. queryreqno 是記錄在貴方, 讓ebet查詢貴方對 incresecredit 事件處理狀況所依據的 reqno.">
+                     <td class="a02">api/參數</td>
+                     <td class="a03">在queryIncreaseCreditRecord這支api中, reqNo與queryReqNo的差異</td>
+                     <td class="a04">reqNo 是 ebet 產生, 用來記錄每一筆我們對貴方的 api 請求. queryReqNo 是記錄在貴方, 讓eBet查詢貴方對 increseCredit 事件處理狀況所依據的 reqNo.</td>
+                 </tr>
+                 <tr class="searchable" data-index="api/參數 在文件中各參數對大小寫與特殊符號有限制嗎嗎? 有限制,需要與文件中規範的相同,否則會造成錯誤.">
+                     <td class="a02">api/參數</td>
+                     <td class="a03">在文件中各參數對大小寫與特殊符號有限制嗎嗎?</td>
+                     <td class="a04">有限制,需要與文件中規範的相同,否則會造成錯誤.</td>
+                 </tr>
+                 <tr class="searchable" data-index="refundseqno/退款 refundseqno是來檢查哪筆下註資料來退款呢？ refundseqno是對應increasecredit事件中 betlist的seqno">
+                     <td class="a02">refundseqno/退款</td>
+                     <td class="a03">refundseqno是來檢查哪筆下註資料來退款呢？</td>
+                     <td class="a04">refundseqno是對應increaseCredit事件中 betlist的seqno</td>
+                 </tr>
+                 <tr class="searchable" data-index="increasecredit/下註 怎麽得知玩家的下註資料? 透過api：increasecredit 當玩家下註時我們會立即發送請求通知">
+                     <td class="a02">increaseCredit/下註</td>
+                     <td class="a03">怎麽得知玩家的下註資料?</td>
+                     <td class="a04">透過API：increaseCredit 當玩家下註時我們會立即發送請求通知</td>
+                 </tr>
+                 <tr class="searchable" data-index="白名單 白名單有哪幾個部分? 白名單需要提供ip做添加。如果沒有特別要求，則預設皆為開放。白名單有三個部分，遊戲前端、呼叫我方ebetapi、數據後台登入。">
+                     <td class="a02">白名單</td>
+                     <td class="a03">白名單有哪幾個部分?</td>
+                     <td class="a04">白名單需要提供IP做添加。如果沒有特別要求，則預設皆為開放。白名單有三個部分，遊戲前端、呼叫我方ebetAPI、數據後台登入。</td>
+                 </tr>
+                 <tr class="searchable" data-index="token 如何直接跳轉進入遊戲大廳? 可以使用此url:http://<provide by ebet>/?infourl=h5/<provide by ebet>&username=test&accesstoken=abc12345，就可以直接進入遊戲大廳。">
+                     <td class="a02">token</td>
+                     <td class="a03">如何直接跳轉進入遊戲大廳?</td>
+                     <td class="a04">可以使用此URL:http://<'provide by ebet'>/?infoUrl=h5/<'provide by ebet'>&username=test&accessToken=abc12345，就可以直接進入遊戲大廳。</td>
+                 </tr>
+                 <tr class="searchable" data-index="api/參數 seqno的值是唯一的嗎? 在increasecredit這個api，seqno的值是唯一的。">
+                     <td class="a02">api/參數</td>
+                     <td class="a03">seqNo的值是唯一的嗎?</td>
+                     <td class="a04">在increaseCredit這個API，seqNo的值是唯一的。</td>
+                 </tr>
+                 <tr class="searchable" data-index="多錢包 多錢包主要有幾種登入方式? 多錢包分為三種登入方式，普通登入，token登入，applinks登入。">
+                     <td class="a02">多錢包</td>
+                     <td class="a03">多錢包主要有幾種登入方式?</td>
+                     <td class="a04">多錢包分為三種登入方式，普通登入，Token登入，AppLinks登入。</td>
+                 </tr>
+                 <tr class="searchable" data-index="api/參數 如果我想要利用 updatebetlimit 設定一個玩家的投註限額, 我該如何設定參數? ebet 利用遊戲類型來管理玩家的投註限額, 如果要更改一個遊戲的投註限額, 就必須要設定這個遊戲類型中的所有參數.">
+                     <td class="a02">api/參數</td>
+                     <td class="a03">如果我想要利用 updatebetlimit 設定一個玩家的投註限額, 我該如何設定參數?</td>
+                     <td class="a04">ebet 利用遊戲類型來管理玩家的投註限額, 如果要更改一個遊戲的投註限額, 就必須要設定這個遊戲類型中的所有參數.</td>
+                 </tr>
+             </tbody>
+         </table>
+         <span id="spanFirst" style="position:relative;left:0%;">首頁</span>
+         <span id="spanPret" style="position:relative;left:20%;">上一頁</span>
+         <span id="spanNext" style="position:relative;left:55%;">下一頁</span>
+         <span id="spanLast" style="position:relative;left:76%;">尾頁</span>
+         <span style="position:relative;left:33%;" id="pages02">第</span><span id="spanPageNum" style="position:relative;left:34%;"></span><span style="position:relative;left:35%;" id="of02">/</span><span style="position:relative;left:36%;" id="spanTotalPage"></span><span style="position:relative;left:37%;" id="jacob02">頁</span>
+     </div>
+
+     <script>
+         var theTable = document.getElementById("tablelsw");
+         var totalPage = document.getElementById("spanTotalPage");
+         var pageNum = document.getElementById("spanPageNum");
+         var spanPre = document.getElementById("spanPret");
+         var spanNext = document.getElementById("spanNext");
+         var spanFirst = document.getElementById("spanFirst");
+         var spanLast = document.getElementById("spanLast");
+         var totalPaget = document.getElementById("spanTotalPaget");
+         var pageNumt = document.getElementById("spanPageNumt");
+         var spanPret = document.getElementById("spanPrett");
+         var spanNextt = document.getElementById("spanNextt");
+         var spanFirstt = document.getElementById("spanFirstt");
+         var spanLastt = document.getElementById("spanLastt");
+         var pages01 = document.getElementById("pages01");
+         var pages02 = document.getElementById("pages02");
+         var of01 = document.getElementById("of01");
+         var of02 = document.getElementById("of02");
+         var jacob01 = document.getElementById("jacob01");
+         var jacob02 = document.getElementById("jacob02");
+         var numberRowsInTable = theTable.rows.length;
+         var pageSize = 10;
+         var page = 1;
+
+         var run = true;
+
+         if (run) {
+             //Next
+             function next() {
+
+                 hideTable();
+
+                 currentRow = pageSize * page;
+                 maxRow = currentRow + pageSize;
+                 if (maxRow > numberRowsInTable) maxRow = numberRowsInTable;
+                 for (var i = currentRow; i < maxRow; i++) {
+                     theTable.rows[i].style.display = '';
+                 }
+                 page++;
+
+                 if (maxRow == numberRowsInTable) { nextText(); lastText(); }
+                 showPage();
+                 preLink();
+                 firstLink();
+             }
+
+             //Pre
+             function pre() {
+
+                 hideTable();
+
+                 page--;
+
+                 currentRow = pageSize * page;
+                 maxRow = currentRow - pageSize;
+                 if (currentRow > numberRowsInTable) currentRow = numberRowsInTable;
+                 for (var i = maxRow; i < currentRow; i++) {
+                     theTable.rows[i].style.display = '';
+                 }
+
+
+                 if (maxRow == 0) { preText(); firstText(); }
+                 showPage();
+                 nextLink();
+                 lastLink();
+             }
+
+             //First
+             function first() {
+                 hideTable();
+                 page = 1;
+                 for (var i = 0; i < pageSize; i++) {
+                     theTable.rows[i].style.display = '';
+                 }
+                 showPage();
+
+                 preText();
+                 nextLink();
+                 lastLink();
+             }
+
+             //Last
+             function last() {
+                 hideTable();
+                 page = pageCount();
+                 currentRow = pageSize * (page - 1);
+                 for (var i = currentRow; i < numberRowsInTable; i++) {
+                     theTable.rows[i].style.display = '';
+                 }
+                 showPage();
+
+                 preLink();
+                 nextText();
+                 firstLink();
+             }
+
+             function hideTable() {
+                 for (var i = 0; i < numberRowsInTable; i++) {
+                     theTable.rows[i].style.display = 'none';
+                 }
+             }
+
+             function showPage() {
+                 pageNum.innerHTML = page;
+                 pageNumt.innerHTML = page;
+             }
+
+             //Of
+             function pageCount() {
+                 var count = 0;
+                 if (numberRowsInTable % pageSize != 0) count = 1;
+                 return parseInt(numberRowsInTable / pageSize) + count;
+             }
+
+             //print
+             function preLink() { spanPre.innerHTML = "<a href='javascript:pre();'>上一頁</a>"; spanPret.innerHTML = "<a href='javascript:pre();'>上一頁</a>"; }
+             function preText() { spanPre.innerHTML = "上一頁"; spanPret.innerHTML = "上一頁"; }
+
+             function nextLink() { spanNext.innerHTML = "<a href='javascript:next();'>下一頁</a>"; spanNextt.innerHTML = "<a href='javascript:next();'>下一頁</a>"; }
+             function nextText() { spanNext.innerHTML = "下一頁"; spanNextt.innerHTML = "下一頁"; }
+
+             function firstLink() { spanFirst.innerHTML = "<a href='javascript:first();'>首頁</a>"; spanFirstt.innerHTML = "<a href='javascript:first();'>首頁</a>"; }
+             function firstText() { spanFirst.innerHTML = "首頁"; spanFirstt.innerHTML = "首頁"; }
+
+             function lastLink() { spanLast.innerHTML = "<a href='javascript:last();'>尾頁</a>"; spanLastt.innerHTML = "<a href='javascript:last();'>尾頁</a>"; }
+             function lastText() { spanLast.innerHTML = "尾頁"; spanLastt.innerHTML = "尾頁"; }
+
+
+
+
+
+             //hidden
+             function hide() {
+                 for (var i = pageSize; i < numberRowsInTable; i++) {
+                     theTable.rows[i].style.display = 'none';
+                 }
+
+                 totalPage.innerHTML = pageCount();
+                 pageNum.innerHTML = '1';
+
+                 totalPaget.innerHTML = pageCount();
+                 pageNumt.innerHTML = '1';
+
+                 nextLink();
+                 lastLink();
+             }
+
+             hide();
+         };
+
+
+
+         var keyword = document.getElementById("paleBlue");
+         var text = document.getElementById("text");
+         var searchStyle = document.getElementById('search_style');
+
+         document.getElementById("text").addEventListener("input", function () {
+             if (!this.value) {
+                 searchStyle.innerHTML = "";
+                 window.location.reload();
+                 return;
+             }
+             if (run) {
+                 first();
+                 run = false
+             };
+             spanFirst.style = "display: none;";
+             spanFirstt.style = "display: none;";
+             spanNext.style = "display: none;";
+             spanNextt.style = "display: none;";
+             spanPre.style = "display: none;";
+             spanPret.style = "display: none;";
+             spanLast.style = "display: none;";
+             spanLastt.style = "display: none;";
+             pageNum.style = "display: none;";
+             pageNumt.style = "display: none;";
+             totalPage.style = "display: none;";
+             totalPaget.style = "display: none;";
+             pages01.style = "display: none;";
+             pages02.style = "display: none;";
+             of01.style = "display: none;";
+             of02.style = "display: none;";
+             jacob01.style = "display: none;";
+             jacob02.style = "display: none;";
+             pageSize = 200;
+             next();
+             pre();
+             searchStyle.innerHTML = ".searchable:not([data-index*=\"" + this.value.toLowerCase() + "\"]) { display: none; }";
+         });
+
+     </script>
+     <script src="http://libs.baidu.com/jquery/1.7.2/jquery.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/mark.js/7.0.0/jquery.mark.min.js"></script>
+     <script type="text/javascript">
+         $(function () {
+             $("input").on("input.highlight", function () {
+                 var searchTerm = $(this).val();
+                 $("#tablelsw").unmark().mark(searchTerm);
+             }).trigger("input.highlight").focus();
+         });
+     </script>
+     <script type="text/javascript">
+
+     </script>
+ </body>
+</html>
