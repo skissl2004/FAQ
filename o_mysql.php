@@ -5,7 +5,7 @@ $DBNAME = "mysql";
 $DBUSER = "laraveldb@laraveldb";
 $DBPASSWD = "Toppath@2019";
 $DBHOST = "laraveldb.mysql.database.azure.com";
-$DBPORT = "3306";
+$DBPORT = 3306;
 $conn = mysqli_connect( $DBHOST, $DBUSER, $DBPASSWD,$DBPORT);
 if (empty($conn)){
   print mysqli_error($conn);
