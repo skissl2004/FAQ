@@ -1,5 +1,6 @@
 <?php session_start();?>
 <?php require_once "db_conn.php"; //db連線 ?>
+<?php include "ip.php"; //用戶IP ?>
 <?php
 header("Content-Type: text/html; charset=utf8");
 if (!isset($_POST["submit"])) {
@@ -14,6 +15,11 @@ if ($name && $passowrd) { //如果使用者名稱和密碼都不為空
     if ($rows) { //0 false 1 true
         $_SESSION['pm'] = $rows['permission'];
         $_SESSION['nk'] = $rows['nickname'];
+        $_SESSION['time'] = $rows['view_date'];
+        $_SESSION['id'] = $rows['channel_id'];
+        $local_ip = $_SESSION['id'];
+        $sql_ip = "UPDATE login SET address_ip = '$ip'  WHERE channel_id = '$local_ip'";
+        $result_ip = mysqli_query($conn, $sql_ip);
         header("refresh:0;url=index.php"); //如果成功跳轉至index.php頁面
         exit;
     } else {
