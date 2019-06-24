@@ -1,8 +1,8 @@
 <?php
 // $con=mysqli_init(); 
 // mysqli_real_connect($con, "laraveldb.mysql.database.azure.com", "laraveldb@laraveldb", "Toppath@2019", "mysql", 3306);
-$host = 'mydemoserver.mysql.database.azure.com';
-$username = 'myadmin@mydemoserver';
+$host = 'laraveldb.mysql.database.azure.com';
+$username = 'laraveldb@laraveldb';
 $password = 'Toppath@2019';
 $db_name = 'mysql';
 
